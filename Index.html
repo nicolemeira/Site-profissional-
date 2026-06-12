@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Nicole Meira Personal Beauty | Maquiagem, Penteados e Estética em Guarapuava</title>
+    <meta name="description" content="Descubra a excelência em beleza com Nicole Meira em Guarapuava. Maquiadora profissional, penteados exclusivos, limpeza de pele e massagens relaxantes premium. Agende sua experiência de luxo.">
+    <meta name="keywords" content="Maquiadora em Guarapuava, Penteados em Guarapuava, Limpeza de Pele em Guarapuava, Drenagem Linfática em Guarapuava, Massagem Relaxante em Guarapuava, Personal Beauty em Guarapuava, Nicole Meira">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nicole Meira Personal Beauty | Alto Padrão em Guarapuava">
+    <meta property="og:description" content="Realçando sua beleza com elegância, cuidado e excelência. Experiências exclusivas de bem-estar e estética.">
+    <meta property="og:image" content="https://i.ibb.co/zTrH5HgR/IMG-1884.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ==========================================================================
+           CONFIGURAÇÕES GERAIS E VARIÁVEIS (PALETA PREMIUM)
+           ========================================================================== */
+        :root {
+            --color-black: #111111;
+            --color-pink-main: #F45D9B;
+            --color-pink-light: #F8C6D8;
+            --color-nude: #F3E6DF;
+            --color-white: #FFFFFF;
+            --color-dark-gray: #1a1a1a;
+            --color-light-gray: #f9f9f9;
+            --font-primary: 'Montserrat', sans-serif;
+            --font-accent: 'Playfair Display', serif;
+            --transition-premium: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--color-white);
+            color: var(--color-black);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .text-center { text-align: center; }
+        .section-padding { padding: 100px 0; }
+        .text-white { color: var(--color-white) !important; }
+        .text-white-muted { color: rgba(255, 255, 255, 0.8); }
+
+        /* Títulos Premium */
+        .section-subtitle {
+            font-family: var(--font-primary);
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: var(--color-pink-main);
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: var(--font-accent);
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--color-black);
+        }
+
+        .divider {
+            height: 1px;
+            width: 60px;
+            background-color: var(--color-pink-main);
+            margin: 20px 0 35px 0;
+        }
+
+        .divider.center {
+            margin: 20px auto 45px auto;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            align-items: center;
+        }
+
+        /* ==========================================================================
+           ELEMENTOS DE ANIMAÇÃO E INTERAÇÃO PREMIUM
+           ========================================================================== */
+        .hidden-fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s var(--transition-premium), transform 1s var(--transition-premium);
+        }
+
+        .hidden-fade-in {
+            opacity: 0;
+            transition: opacity 1.2s var(--transition-premium);
+        }
+
+        .show-element {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loader */
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-logo {
+            width: 150px;
+            margin-bottom: 20px;
+            animation: pulseLogo 2s infinite ease-in-out;
+        }
+
+        .loader-line {
+            width: 100px;
+            height: 1px;
+            background-color: var(--color-pink-main);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loader-line::after {
+            content: '';
+            position: absolute;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-nude);
+            animation: loadingBar 1.5s infinite linear;
+        }
+
+        @keyframes pulseLogo {
+            0%, 100% { opacity: 0.6; transform: scale(0.98); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes loadingBar {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 35px;
+            font-family: var(--font-primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 0;
+            text-decoration: none;
+            transition: all 0.4s var(--transition-premium);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background-color: var(--color-pink-main);
+            color: var(--color-white);
+            border: 1px solid var(--color-pink-main);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--color-pink-main);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-white);
+            border: 1px solid var(--color-white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-white);
+            color: var(--color-black);
+            transform: translateY(-2px);
+        }
+
+        .btn-shine::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            transition: none;
+        }
+
+        .btn-shine:hover::after {
+            animation: shineEffect 0.8s ease-in-out;
+        }
+
+        @keyframes shineEffect {
+            100% { left: 150%; }
+        }
+
+        .btn-full { width: 100%; }
+
+        /* ==========================================================================
+           HEADER / MENU FIXO
+           ========================================================================== */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 25px 0;
+            transition: all 0.4s var(--transition-premium);
+            background-color: transparent;
+        }
+
+        .main-header.scrolled {
+            padding: 12px 0;
+            background-color: rgba(17, 17, 17, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(244, 93, 155, 0.15);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            height: 55px;
+            transition: transform 0.4s ease;
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--color-white);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--color-pink-main);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--color-pink-light);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            width: 28px;
+            height: 2px;
+            background-color: var(--color-white);
+            transition: all 0.3s ease;
+        }
+
+        /* ==========================================================================
+           SEÇÃO HERO
+           ========================================================================== */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .hero-parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-image: url('https://i.ibb.co/zTrH5HgR/IMG-1884.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            will-change: transform;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(17,17,17,0.7) 0%, rgba(17,17,17,0.85) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero-tag {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--color-pink-light);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .hero-title {
+            font-family: var(--font-accent);
+            font-size: 3.5rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--color-nude);
+            margin-bottom: 40px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .hero-scroll-indicator .mouse {
+            width: 22px;
+            height: 38px;
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .hero-scroll-indicator .wheel {
+            width: 4px;
+            height: 8px;
+            background-color: var(--color-pink-main);
+            border-radius: 2px;
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scrollMouse 1.5s infinite ease-in-out;
+        }
+
+        @keyframes scrollMouse {
+            0% { top: 6px; opacity: 1; }
+            100% { top: 18px; opacity: 0; }
+        }
+
+        /* ==========================================================================
+           SEÇÃO SOBRE MIM
+           ========================================================================== */
+        .sobre-image-wrapper {
+            position: relative;
+            padding: 20px;
+        }
+
+        .premium-frame {
+            position: relative;
+            border: 1px solid var(--color-pink-light);
+            padding: 15px;
+        }
+
+        .premium-frame::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 50px;
+            height: 50px;
+            border-top: 2px solid var(--color-pink-main);
+            border-left: 2px solid var(--color-pink-main);
+        }
+
+        .sobre-img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            filter: grayscale(15%);
+            transition: filter 0.5s ease;
+        }
+
+        .sobre-img:hover {
+            filter: grayscale(0%);
+        }
+
+        .sobre-text-content p {
+            color: #444444;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .legacy-text {
+            font-family: var(--font-accent);
+            color: var(--color-pink-main) !important;
+            font-size: 1.3rem !important;
+            margin-top: 30px;
+        }
+
+        .counters-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            border-top: 1px solid var(--color-nude);
+            padding-top: 30px;
+        }
+
+        .counter-box {
+            text-align: left;
+        }
+
+        .counter-number {
+            font-family: var(--font-accent);
+            font-size: 2.2rem;
+            color: var(--color-black);
+            font-weight: 600;
+        }
+
+        .counter-plus {
+            font-family: var(--font-accent);
+            font-size: 1.8rem;
+            color: var(--color-pink-main);
+        }
+
+        .counter-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #777 !important;
+            margin-top: 2px;
+        }
+
+        /* ==========================================================================
+           SEÇÃO SERVIÇOS (DARK / LUXURY)
+           ========================================================================== */
+        .servicos-section {
+            background-color: var(--color-black);
+            position: relative;
+        }
+
+        .grid-services {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            text-align: left;
+            transition: all 0.4s var(--transition-premium);
+            backdrop-filter: blur(5px);
+        }
+
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--color-pink-main);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            color: var(--color-pink-main);
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-accent);
+            color: var(--color-white);
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-list li i {
+            font-size: 0.8rem;
+            color: var(--color-pink-light);
+        }
+
+        /* ==========================================================================
+           SEÇÃO GALERIA
+           ========================================================================== */
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 1px solid var(--color-nude);
+            padding: 10px 25px;
+            font-family: var(--font-primary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover,
+        .tab-btn.active {
+            background-color: var(--color-pink-main);
+            border-color: var(--color-pink-main);
+            color: var(--color-white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--transition-premium);
+        }
+
+        .gallery-overlay-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(17, 17, 17, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-overlay-item i {
+            color: var(--color-white);
+            font-size: 1.5rem;
+            transform: scale(0.8);
+            transition: transform 0.4s var(--transition-premium);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-item:hover .gallery-overlay-item {
+            opacity: 1;
+        }
+
+        .gallery-item:hover .gallery-overlay-item i {
+            transform: scale(1);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(11, 11, 11, 0.95);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            max-width: 85%;
+            max-height: 85vh;
+            object-fit: contain;
+            transform: scale(0.95);
+            transition: transform 0.4s var(--transition-premium);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .lightbox.active .lightbox-content {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: var(--color-white);
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .lightbox-close:hover { color: var(--color-pink-main); }
+
+        .lightbox-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            color: var(--color-white);
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 20px;
+            transition: color 0.3s ease;
+            z-index: 2010;
+        }
+
+        .lightbox-btn:hover { color: var(--color-pink-main); }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+
+        /* ==========================================================================
+           SIMULADOR DE ORÇAMENTO (GLASSMORPHISM)
+           ========================================================================== */
+        .orcamento-section {
+            background: linear-gradient(rgba(17,17,17,0.85), rgba(17,17,17,0.9)), url('https://i.ibb.co/zTrH5HgR/IMG-1884.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .grid-2-form {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .premium-badge-box {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(244, 93, 155, 0.1);
+            border: 1px solid rgba(244, 93, 155, 0.2);
+            padding: 15px 20px;
+        }
+
+        .premium-badge-box i {
+            color: var(--color-pink-main);
+            font-size: 1.2rem;
+        }
+
+        .premium-badge-box span {
+            font-size: 0.85rem;
+            color: var(--color-nude);
+            letter-spacing: 1px;
+        }
+
+        .premium-form {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 45px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .premium-form label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--color-nude);
+            margin-bottom: 8px;
+        }
+
+        .premium-form input,
+        .premium-form select,
+        .premium-form textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 14px 18px;
+            color: var(--color-white);
+            font-family: var(--font-primary);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .premium-form input:focus,
+        .premium-form select:focus,
+        .premium-form textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--color-pink-main);
+            box-shadow: 0 0 10px rgba(244, 93, 155, 0.2);
+        }
+
+        .premium-form select option {
+            background-color: var(--color-black);
+            color: var(--color-white);
+        }
+
+        /* ==========================================================================
+           SEÇÃO AVALIAÇÕES (LOCALSTORAGE + SISTEMA VISUAL)
+           ========================================================================== */
+        .reviews-dashboard {
+            background-color: var(--color-light-gray);
+            border: 1px solid var(--color-nude);
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-score h3 {
+            font-family: var(--font-accent);
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .dashboard-score .stars, 
+        .review-card .stars {
+            color: #FFC107;
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+
+        .dashboard-score p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .review-form-container {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s var(--transition-premium), margin 0.5s ease;
+        }
+
+        .review-form-container.active {
+            max-height: 600px;
+            margin-bottom: 50px;
+        }
+
+        .premium-form-light {
+            background-color: var(--color-light-gray);
+            border: 1px solid var(--color-nude);
+            padding: 35px;
+        }
+
+        .premium-form-light h3 {
+            font-family: var(--font-accent);
+            margin-bottom: 20px;
+        }
+
+        .premium-form-light label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .premium-form-light input,
+        .premium-form-light textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            font-family: var(--font-primary);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .star-rating-input {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 8px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .star-rating-input input { display: none; }
+        .star-rating-input label { color: #ccc; cursor: pointer; transition: color 0.2s ease; }
+        .star-rating-input input:checked ~ label,
+        .star-rating-input label:hover,
+        .star-rating-input label:hover ~ label { color: #FFC107; }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-nude);
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover { transform: translateY(-3px); }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .review-client-name {
+            font-family: var(--font-accent);
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .review-client-city {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #888;
+            letter-spacing: 1px;
+        }
+
+        .review-card p {
+            font-size: 0.9rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* ==========================================================================
+           SEÇÃO INSTAGRAM
+           ========================================================================== */
+        .instagram-section { background-color: var(--color-nude); }
+        .insta-icon-box { font-size: 2.5rem; color: var(--color-pink-main); margin-bottom: 15px; }
+        .insta-handle { font-family: var(--font-accent); font-size: 1.6rem; color: var(--color-black); margin-bottom: 15px; }
+        .insta-text { max-width: 600px; margin: 0 auto 30px auto; color: #555; }
+
+        /* ==========================================================================
+           LOCALIZAÇÃO E DETALHES DE CONTATO
+           ========================================================================== */
+        .grid-2-map {
+            display: grid;
+            grid-template-columns: 45% 55%;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .info-item { display: flex; gap: 20px; margin-top: 30px; }
+        .info-icon { font-size: 1.3rem; color: var(--color-pink-main); margin-top: 3px; }
+        .info-text h3 { font-family: var(--font-primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .info-text p { color: #545454; font-size: 0.95rem; }
+        .map-wrapper { border: 1px solid var(--color-nude); padding: 10px; background-color: var(--color-white); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+
+        /* ==========================================================================
+           FOOTER
+           ========================================================================== */
+        .main-footer {
+            background-color: var(--color-black);
+            padding: 60px 0 30px 0;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-logo { height: 70px; margin: 0 auto 25px auto; }
+        .footer-socials { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; }
+        .footer-socials a { color: var(--color-white); font-size: 1.2rem; transition: color 0.3s ease; }
+        .footer-socials a:hover { color: var(--color-pink-main); }
+        .copyright { margin-bottom: 5px; }
+        .developer { font-size: 0.75rem; color: rgba(255,255,255,0.2); letter-spacing: 1px; }
+
+        /* ==========================================================================
+           BOTÃO FLUTUANTE WHATSAPP
+           ========================================================================== */
+        .whatsapp-floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: var(--color-white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .whatsapp-floating-btn:hover { transform: scale(1.08); background-color: #20ba5a; }
+
+        .whatsapp-floating-btn .tooltip-text {
+            position: absolute;
+            right: 75px;
+            background-color: var(--color-black);
+            color: var(--color-white);
+            padding: 8px 15px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .whatsapp-floating-btn:hover .tooltip-text { opacity: 1; visibility: visible; }
+
+        /* ==========================================================================
+           RESPONSIVIDADE
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .grid-services { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .section-padding { padding: 60px 0; }
+            .grid-2, .grid-2-form, .grid-2-map { grid-template-columns: 1fr; gap: 40px; }
+            .section-title { font-size: 2rem; }
+            .hero-title { font-size: 2.3rem; }
+            
+            .menu-toggle { display: flex; }
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: var(--color-black);
+                padding: 100px 40px;
+                transition: right 0.5s var(--transition-premium);
+                box-shadow: -5px 0 25px rgba(0,0,0,0.5);
+            }
+            .nav-menu.active { right: 0; }
+            .nav-menu ul { flex-direction: column; gap: 25px; }
+            
+            .menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); background-color: var(--color-pink-main); }
+            .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+            .menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: var(--color-pink-main); }
+            
+            .hero-buttons { flex-direction: column; gap: 15px; }
+            .sobre-img { height: 400px; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .premium-form { padding: 25px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .reviews-dashboard { flex-direction: column; gap: 25px; text-align: center; }
+            .reviews-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .grid-services { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader-container" id="loader">
+        <div class="loader-content">
+            <img src="https://i.ibb.co/DHP1fYHc/IMG-1890.png" alt="Nicole Meira Logo" class="loader-logo">
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#inicio" class="logo-back">
+                <img src="https://i.ibb.co/DHP1fYHc/IMG-1890.png" alt="Nicole Meira Logo" class="nav-logo">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio" class="nav-link active">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="#orcamento" class="nav-link">Orçamento</a></li>
+                    <li><a href="#avaliacoes" class="nav-link">Avaliações</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-parallax-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content hidden-fade-up">
+            <span class="hero-tag">Nicole Meira | Personal Beauty</span>
+            <h1 class="hero-title">Realçando sua beleza com elegância, cuidado e excelência.</h1>
+            <p class="hero-subtitle">Maquiagem, penteados, limpeza de pele e experiências de bem-estar criadas para valorizar sua autoestima em cada detalhe.</p>
+            <div class="hero-buttons">
+                <a href="#orcamento" class="btn btn-primary btn-shine">Solicitar Orçamento</a>
+                <a href="https://wa.me/5521982898660" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Deslize</span>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre-section section-padding">
+        <div class="container grid-2">
+            <div class="sobre-image-wrapper hidden-fade-in">
+                <div class="premium-frame">
+                    <img src="https://i.ibb.co/0yYCWTCy/IMG-1888.jpg" alt="Nicole Meira" class="sobre-img">
+                </div>
+            </div>
+            <div class="sobre-text-content hidden-fade-up">
+                <span class="section-subtitle">A Essência</span>
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="divider"></div>
+                <p>Minha história com a beleza começou muito antes de transformar essa paixão em profissão.</p>
+                <p>Cresci acompanhando de perto o trabalho da minha mãe, <strong>Cleuza Meira</strong>, biomédica esteta reconhecida pela excelência, transparência e cuidado com cada paciente.</p>
+                <p>Desde pequena estive presente nesse universo, aprendendo, observando e desarrollando um amor genuíno pela área da beleza, autoestima e bem-estar.</p>
+                <p>Hoje tenho a alegria de continuar esse legado através de atendimentos personalizados, realizados com carinho, dedicação e atenção aos detalhes.</p>
+                <p>Acredito que a beleza vai muito além da aparência. Ela está ligada à confiança, ao autocuidado e à forma como cada pessoa se sente consigo mesma.</p>
+                <p>Mais do que procedimentos, meu objetivo é proporcionar experiências que façam cada cliente se sentir especial.</p>
+                <p class="legacy-text"><em>O legado continua.</em></p>
+                
+                <div class="counters-container">
+                    <div class="counter-box">
+                        <span class="counter-number" data-target="1000">0</span><span class="counter-plus">+</span>
+                        <p class="counter-label">Clientes Felizes</p>
+                    </div>
+                    <div class="counter-box">
+                        <span class="counter-number" data-target="15">0</span><span class="counter-plus">+</span>
+                        <p class="counter-label">Especialidades</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="servicos-section section-padding">
+        <div class="container text-center">
+            <span class="section-subtitle">Menu de Experiências</span>
+            <h2 class="section-title text-white">Serviços Premium</h2>
+            <div class="divider center"></div>
+            
+            <div class="grid-services hidden-fade-up">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Maquiagem</h3>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Social</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Festa</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Formatura</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Casamento</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Eventos</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-sparkles"></i></div>
+                    <h3>Penteados</h3>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Noivas</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Madrinhas</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Formandas</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Eventos</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
+                    <h3>Estética Facial</h3>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Limpeza de Pele</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-hot-stone"></i></div>
+                    <h3>Massagens</h3>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Drenagem Linfática</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Relaxante</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Bambuterapia</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Manta Térmica</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Pedras Quentes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria-section section-padding">
+        <div class="container text-center">
+            <span class="section-subtitle">Portfólio</span>
+            <h2 class="section-title">Galeria Exclusiva</h2>
+            <div class="divider center"></div>
+            
+            <div class="gallery-tabs">
+                <button class="tab-btn active" data-filter="todas">Todas</button>
+                <button class="tab-btn" data-filter="maquiagem">Maquiagens</button>
+                <button class="tab-btn" data-filter="penteado">Penteados</button>
+            </div>
+
+            <div class="gallery-grid hidden-fade-up">
+                <div class="gallery-item" data-category="maquiagem">
+                    <img src="https://i.ibb.co/svMrKfVR/IMG-1871.jpg" alt="Maquiagem Profissional Nicole Meira">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="maquiagem">
+                    <img src="https://i.ibb.co/Y4M7VkYz/IMG-1872.jpg" alt="Maquiagem Premium">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="maquiagem">
+                    <img src="https://i.ibb.co/cXSYpFJW/IMG-1873.jpg" alt="Maquiagem Social de Luxo">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="maquiagem">
+                    <img src="https://i.ibb.co/N269Ym7v/IMG-1874.jpg" alt="Maquiagem Eventos">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="maquiagem">
+                    <img src="https://i.ibb.co/C37YbbKV/IMG-1875.jpg" alt="Maquiagem Formatura e Casamento">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="maquiagem">
+                    <img src="https://i.ibb.co/4RTDYrmx/IMG-1876.jpg" alt="Maquiagem Detalhes">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="maquiagem">
+                    <img src="https://i.ibb.co/rRCqryhL/IMG-1877.jpg" alt="Beleza Realçada">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+
+                <div class="gallery-item" data-category="penteado">
+                    <img src="https://i.ibb.co/fdGQwdsX/IMG-1878.jpg" alt="Penteado Noiva / Madrinha">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="penteado">
+                    <img src="https://i.ibb.co/rR3zS93R/IMG-1879.png" alt="Penteado Sofisticado">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="penteado">
+                    <img src="https://i.ibb.co/4nt2QfFW/IMG-1880.jpg" alt="Penteado Formanda">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="penteado">
+                    <img src="https://i.ibb.co/20twmfxv/IMG-1883.jpg" alt="Penteado Coque Despojado Premium">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="penteado">
+                    <img src="https://i.ibb.co/Z69Htdzx/IMG-1885.jpg" alt="Penteado Luxo">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-category="penteado">
+                    <img src="https://i.ibb.co/v65Fpf03/IMG-1886.jpg" alt="Penteado Detalhes Nicole Meira">
+                    <div class="gallery-overlay-item"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightboxModal">
+        <span class="lightbox-close">×</span>
+        <button class="lightbox-btn lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="">
+        <button class="lightbox-btn lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <section id="orcamento" class="orcamento-section section-padding">
+        <div class="container">
+            <div class="grid-2-form">
+                <div class="orcamento-info hidden-fade-in">
+                    <span class="section-subtitle">Atendimento Exclusivo</span>
+                    <h2 class="section-title text-white">Simulador de Orçamento</h2>
+                    <div class="divider"></div>
+                    <p class="text-white-muted">Planeje seu momento único. Preencha os campos ao lado para gerar uma solicitação detalhada direto para o nosso canal de atendimento exclusivo via WhatsApp. Retornaremos com sua proposta personalizada rapidamente.</p>
+                    <div class="premium-badge-box">
+                        <i class="fa-solid fa-crown"></i>
+                        <span>Experiência de Alto Padrão Sem Taxas Ocultas</span>
+                    </div>
+                </div>
+                <div class="orcamento-form-wrapper hidden-fade-up">
+                    <form id="smartBudgetForm" class="premium-form">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" placeholder="Ex: Maria Silva" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" placeholder="Ex: Guarapuava" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="whatsapp">WhatsApp</label>
+                                <input type="tel" id="whatsapp" placeholder="(42) 99999-9999" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="procedimento">Procedimento Desejado</label>
+                            <select id="procedimento" required>
+                                <option value="" disabled selected>Selecione uma opção...</option>
+                                <option value="Maquiagem Social/Festa">Maquiagem (Social / Festa / Formatura)</option>
+                                <option value="Combo Noiva (Maquiagem + Penteado)">Combo Noiva Especial</option>
+                                <option value="Penteado Exclusivo">Penteados (Madrinhas / Formandas)</option>
+                                <option value="Estética Facial / Limpeza de Pele">Estética Facial / Limpeza de Pele</option>
+                                <option value="Massagem de Relaxamento/Drenagem">Massagens (Relaxante / Drenagem / Pedras)</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="data">Data Desejada</label>
+                                <input type="date" id="data" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pessoas">Número de Pessoas</label>
+                                <input type="number" id="pessoas" min="1" value="1" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="observacoes">Observações Especiais</label>
+                            <textarea id="observacoes" rows="3" placeholder="Conte-nos detalhes do seu evento ou suas preferências..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full btn-shine">Solicitar Atendimento</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="avaliacoes" class="avaliacoes-section section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">Depoimentos</span>
+                <h2 class="section-title">Avaliações das Clientes</h2>
+                <div class="divider center"></div>
+            </div>
+
+            <div class="reviews-dashboard hidden-fade-up">
+                <div class="dashboard-score">
+                    <h3 id="averageScore">5.0</h3>
+                    <div class="stars" id="dashboardStars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p><span id="totalReviewsCount">0</span> avaliações baseadas em experiências reais</p>
+                </div>
+                <div class="dashboard-action">
+                    <button id="openReviewFormBtn" class="btn btn-secondary">Deixar Minha Avaliação</button>
+                </div>
+            </div>
+
+            <div id="reviewFormContainer" class="review-form-container">
+                <form id="newReviewForm" class="premium-form-light">
+                    <h3>Sua Experiência Premium</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="revNome">Seu Nome</label>
+                            <input type="text" id="revNome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="revCidade">Sua Cidade</label>
+                            <input type="text" id="revCidade" placeholder="Ex: Guarapuava" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Sua Nota</label>
+                        <div class="star-rating-input">
+                            <input type="radio" name="rating" id="star5" value="5" checked><label for="star5"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star4" value="4"><label for="star4"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star3" value="3"><label for="star3"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star2" value="2"><label for="star2"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star1" value="1"><label for="star1"><i class="fa-solid fa-star"></i></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="revComentario">Comentário (Opcional)</label>
+                        <textarea id="revComentario" rows="2"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Publicar Avaliação</button>
+                </form>
+            </div>
+
+            <div class="reviews-grid hidden-fade-up" id="reviewsGrid"></div>
+        </div>
+    </section>
+
+    <section class="instagram-section section-padding">
+        <div class="container text-center hidden-fade-up">
+            <div class="insta-icon-box"><i class="fab fa-instagram"></i></div>
+            <h2 class="section-title">Siga-me no Instagram</h2>
+            <p class="insta-handle">@nicolemeira.beauty</p>
+            <p class="insta-text">Fique por dentro de todas as novidades, tendências de make, penteados e dicas diárias de cuidados com a pele em tempo real.</p>
+            <a href="https://www.instagram.com/nicolemeira.beauty" target="_blank" class="btn btn-primary btn-shine">Seguir @nicolemeira.beauty</a>
+        </div>
+    </section>
+
+    <section id="contato" class="contato-section section-padding">
+        <div class="container grid-2-map">
+            <div class="contato-details hidden-fade-in">
+                <span class="section-subtitle">Atendimento Presencial</span>
+                <h2 class="section-title">Localização & Contato</h2>
+                <div class="divider"></div>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info-text">
+                        <h3>Onde Atendemos</h3>
+                        <p>Clínica Bela Forma<br>Rua Padre Chagas, 4358<br>Guarapuava - Paraná</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="info-text">
+                        <h3>Telefone / WhatsApp</h3>
+                        <p>+55 21 98289-8660</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="info-text">
+                        <h3>Horários de Atendimento</h3>
+                        <p>Sob agendamento prévio personalizado.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-wrapper hidden-fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.3734027787383!2d-51.4695022!3d-25.3923485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ef36329c065f49%3A0x63a3b7c8441eb59d!2sR.%20Padre%20Chagas%20-%20Guarapuava%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container text-center">
+            <img src="https://i.ibb.co/DHP1fYHc/IMG-1890.png" alt="Nicole Meira Logo Final" class="footer-logo">
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/nicolemeira.beauty" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5521982898660" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="copyright">© 2026 Nicole Meira Personal Beauty. Todos os direitos reservados.</p>
+            <p class="developer">Desenvolvido com sofisticação e elegância.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5521982898660" class="whatsapp-floating-btn" target="_blank" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip-text">Agende Agora</span>
+    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            // 1. Loader Controller
+            const loader = document.getElementById('loader');
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                    triggerScrollReveal();
+                }, 800);
+            });
+
+            // 2. Menu Mobile e Scroll
+            const header = document.querySelector('.main-header');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                highlightActiveMenuLink();
+            });
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            function highlightActiveMenuLink() {
+                let scrollPosition = window.scrollY + 150;
+                document.querySelectorAll('section').forEach(section => {
+                    if (scrollPosition >= section.offsetTop && scrollPosition < (section.offsetTop + section.offsetHeight)) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${section.getAttribute('id')}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+
+            // 3. Parallax
+            const heroBg = document.querySelector('.hero-parallax-bg');
+            window.addEventListener('scroll', () => {
+                let offset = window.scrollY;
+                if (window.innerWidth > 768) {
+                    heroBg.style.transform = `translateY(${offset * 0.4}px)`;
+                }
+            });
+
+            // 4. Scroll Reveal
+            const revealElements = document.querySelectorAll('.hidden-fade-up, .hidden-fade-in');
+            function triggerScrollReveal() {
+                revealElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    if (elementTop < windowHeight - 50) {
+                        element.classList.add('show-element');
+                        if (element.classList.contains('sobre-text-content')) {
+                            startCounters();
+                        }
+                    }
+                });
+            }
+            window.addEventListener('scroll', triggerScrollReveal);
+
+            // 5. Contadores Animados
+            let countersStarted = false;
+            function startCounters() {
+                if (countersStarted) return;
+                countersStarted = true;
+                const counters = document.querySelectorAll('.counter-number');
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000;
+                    const increment = target / (duration / 16);
+                    let current = 0;
+                    const updateCount = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.innerText = Math.ceil(current);
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                });
+            }
+
+            // 6. Filtro Galeria & Lightbox
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.getAttribute('data-filter');
+                    galleryItems.forEach(item => {
+                        if (filter === 'todas' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => item.style.opacity = '1', 50);
+                        } else {
+                            item.style.opacity = '0';
+                            setTimeout(() => item.style.display = 'none', 300);
+                        }
+                    });
+                });
+            });
+
+            const lightbox = document.getElementById('lightboxModal');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const closeBtn = document.querySelector('.lightbox-close');
+            const prevBtn = document.querySelector('.lightbox-prev');
+            const nextBtn = document.querySelector('.lightbox-next');
+            let activeImagesArray = [];
+            let currentImgIndex = 0;
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    activeImagesArray = Array.from(galleryItems).filter(i => i.style.display !== 'none');
+                    currentImgIndex = activeImagesArray.indexOf(item);
+                    const imgSrc = item.querySelector('img').getAttribute('src');
+                    lightboxImg.setAttribute('src', imgSrc);
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            const navigateLightbox = (direction) => {
+                if (direction === 'next') {
+                    currentImgIndex = (currentImgIndex + 1) % activeImagesArray.length;
+                } else {
+                    currentImgIndex = (currentImgIndex - 1 + activeImagesArray.length) % activeImagesArray.length;
+                }
+                const nextSrc = activeImagesArray[currentImgIndex].querySelector('img').getAttribute('src');
+                lightboxImg.style.transform = 'scale(0.95)';
+                lightboxImg.style.opacity = '0';
+                setTimeout(() => {
+                    lightboxImg.setAttribute('src', nextSrc);
+                    lightboxImg.style.transform = 'scale(1)';
+                    lightboxImg.style.opacity = '1';
+                }, 200);
+            };
+
+            nextBtn.addEventListener('click', () => navigateLightbox('next'));
+            prevBtn.addEventListener('click', () => navigateLightbox('prev'));
+            closeBtn.addEventListener('click', () => { lightbox.classList.remove('active'); document.body.style.overflow = 'auto'; });
+            lightbox.addEventListener('click', (e) => { if(e.target === lightbox) { lightbox.classList.remove('active'); document.body.style.overflow = 'auto'; } });
+
+            // 7. Simulador de Orçamento
+            const budgetForm = document.getElementById('smartBudgetForm');
+            budgetForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const nome = document.getElementById('nome').value;
+                const cidade = document.getElementById('cidade').value;
+                const whatsapp = document.getElementById('whatsapp').value;
+                const procedimento = document.getElementById('procedimento').value;
+                const data = document.getElementById('data').value;
+                const pessoas = document.getElementById('pessoas').value;
+                const observacoes = document.getElementById('observacoes').value || "Nenhuma.";
+                const dataFormatada = data.split('-').reverse().join('/');
+
+                const textoMensagem = `Olá Nicole!\nGostaria de solicitar um orçamento.\n\n` +
+                                      `Nome: ${nome}\n` +
+                                      `Cidade: ${cidade}\n` +
+                                      `WhatsApp: ${whatsapp}\n` +
+                                      `Procedimento: ${procedimento}\n` +
+                                      `Data desejada: ${dataFormatada}\n` +
+                                      `Número de pessoas: ${pessoas}\n` +
+                                      `Observações: ${observacoes}`;
+
+                window.open(`https://wa.me/5521982898660?text=${encodeURIComponent(textoMensagem)}`, '_blank');
+            });
+
+            // 8. Sistema de Avaliações (LocalStorage)
+            const openReviewFormBtn = document.getElementById('openReviewFormBtn');
+            const reviewFormContainer = document.getElementById('reviewFormContainer');
+            const newReviewForm = document.getElementById('newReviewForm');
+            const reviewsGrid = document.getElementById('reviewsGrid');
+            
+            const defaultReviews = [
+                { nome: "Amanda Rezende", cidade: "Guarapuava", nota: 5, comentario: "A Nicole é fantástica! A maquiagem durou a noite inteira no casamento e todos elogiaram o penteado de luxo." },
+                { nome: "Carolina Mendes", cidade: "Guarapuava", nota: 5, comentario: "A experiência da limpeza de pele é maravilhosa. Ambiente aconchegante e tratamento refinado." },
+                { nome: "Beatriz Meira", cidade: "Guarapuava", nota: 5, comentario: "Fiz o combo de massagem relaxante com pedras quentes. Indico de olhos fechados!" }
+            ];
+
+            let currentReviews = JSON.parse(localStorage.getItem('nicole_meira_reviews')) || defaultReviews;
+            if(!localStorage.getItem('nicole_meira_reviews')) localStorage.setItem('nicole_meira_reviews', JSON.stringify(currentReviews));
+
+            openReviewFormBtn.addEventListener('click', () => {
+                reviewFormContainer.classList.toggle('active');
+                openReviewFormBtn.innerText = reviewFormContainer.classList.contains('active') ? "Fechar Formulário" : "Deixar Minha Avaliação";
+            });
+
+            newReviewForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const revNome = document.getElementById('revNome').value;
+                const revCidade = document.getElementById('revCidade').value;
+                const revNota = parseInt(document.querySelector('input[name="rating"]:checked').value);
+                const revComentario = document.getElementById('revComentario').value || "Experiência sensacional de cuidado e atenção aos detalhes.";
+
+                currentReviews.unshift({ nome: revNome, cidade: revCidade, nota: revNota, comentario: revComentario });
+                localStorage.setItem('nicole_meira_reviews', JSON.stringify(currentReviews));
+                
+                newReviewForm.reset();
+                reviewFormContainer.classList.remove('active');
+                openReviewFormBtn.innerText = "Deixar Minha Avaliação";
+                renderReviews();
+            });
+
+            function renderReviews() {
+                reviewsGrid.innerHTML = '';
+                let totalScore = 0;
+                currentReviews.forEach(rev => {
+                    totalScore += rev.nota;
+                    let starsHTML = '';
+                    for(let i = 1; i <= 5; i++) starsHTML += i <= rev.nota ? `<i class="fa-solid fa-star"></i>` : `<i class="fa-regular fa-star"></i>`;
+                    
+                    const card = document.createElement('div');
+                    card.className = 'review-card';
+                    card.innerHTML = `
+                        <div class="review-header">
+                            <span class="review-client-name">${rev.nome}</span>
+                            <span class="review-client-city">${rev.cidade}</span>
+                        </div>
+                        <div class="stars">${starsHTML}</div>
+                        <p>"${rev.comentario}"</p>
+                    `;
+                    reviewsGrid.appendChild(card);
+                });
+                document.getElementById('averageScore').innerText = (totalScore / currentReviews.length).toFixed(1);
+                document.getElementById('totalReviewsCount').innerText = currentReviews.length;
+            }
+            renderReviews();
+        });
+    </script>
+</body>
+</html>
